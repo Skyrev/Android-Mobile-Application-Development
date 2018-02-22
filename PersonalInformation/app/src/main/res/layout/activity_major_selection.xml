@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.cs646.skyrev.personalinformation.MajorSelectionActivity"
+    android:id="@+id/major_selection"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+        
+    <fragment
+        android:id="@+id/fragment_advanced_degrees"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:name="com.cs646.skyrev.personalinformation.AdvancedDegreesFragment"
+        tools:layout="@layout/fragment_advanced_degrees" />
+
+</FrameLayout>

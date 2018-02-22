@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cs646.skyrev.currencyconverter.MainActivity">
+
+    <Button
+        android:id="@+id/convert_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:onClick="convertCurrencies"
+        android:text="@string/convert_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/usd_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="9dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="20dp"
+        android:labelFor="@id/usd_input"
+        android:text="@string/usd_label"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/usd_input"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/convert_button" />
+
+    <TextView
+        android:id="@+id/inr_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="26dp"
+        android:labelFor="@id/inr_input"
+        android:text="@string/inr_label"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/inr_input"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/usd_label" />
+
+    <EditText
+        android:id="@+id/usd_input"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="@string/usd_hint"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/convert_button" />
+
+    <EditText
+        android:id="@+id/inr_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/inr_hint"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/usd_input" />
+
+</android.support.constraint.ConstraintLayout>

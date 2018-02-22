@@ -1,0 +1,159 @@
+<resources>
+    <string name="app_name">Personal Information</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="age">Age</string>
+    <string name="email">Email</string>
+    <string name="phone">Phone</string>
+    <string name="major">Major</string>
+    <string name="done">Done</string>
+    <string name="clear">Clear</string>
+    <string name="select_a_major">Tap to select major</string>
+    <string name="toast_information_saved">Information saved to memory.</string>
+    <string name="toast_information_cleared">Information cleared from memory.</string>
+    <string name="logo">Logo</string>
+    <string name="enter_first_name">Enter First Name</string>
+    <string name="enter_last_name">Enter Last Name</string>
+    <string name="enter_age">Enter Age</string>
+    <string name="enter_email">Enter valid Email</string>
+    <string name="enter_valid_phone">Enter 10-digit Phone No.</string>
+    <string name="sdsu_advanced_degrees">SDSU Advanced Degrees</string>
+    <string name="footer">Akash Revankar | Copyright 2018</string>
+    <string name="hint_phone">10-digit</string>
+
+    <string-array name="advanced_degrees">
+        <item>Doctor of Philosophy (Ph.D.)</item>
+        <item>Doctor of Education (Ed.D.)</item>
+        <item>Master of Arts (MA)</item>
+        <item>Master of Science (MS)</item>
+        <item>Master of Fine Arts (MFA)</item>
+        <item>Professional Master\'s Degrees</item>
+    </string-array>
+
+    <string-array name="major_prefixes">
+        <item>Ph.D.</item>
+        <item>Ed.D</item>
+        <item>MA</item>
+        <item>MS</item>
+        <item>MFA</item>
+        <item></item>
+    </string-array>
+
+    <string-array name="doctor_of_philosophy">
+        <item>Bioengineering</item>
+        <item>Biology</item>
+        <item>Chemistry</item>
+        <item>Clinical Psychology</item>
+        <item>Computational Science</item>
+        <item>Ecology</item>
+        <item>Education</item>
+        <item>Engineering/Bioengineering</item>
+        <item>Engineering/Electrical and Computer</item>
+        <item>Engineering/Mechanical and Aerospace</item>
+        <item>Engineering/Structural</item>
+        <item>Evolutionary Biology</item>
+        <item>Geography</item>
+        <item>Geophysics</item>
+        <item>Language and Communicative Disorders</item>
+        <item>Mathematics and Science Education</item>
+        <item>Public Health</item>
+    </string-array>
+
+    <string-array name="doctor_of_education">
+        <item>Educational Leadership/Pre K-12</item>
+        <item>Educational Leadership/Post Secondary Community College</item>
+    </string-array>
+
+    <string-array name="master_of_arts">
+        <item>Anthropology</item>
+        <item>Art</item>
+        <item>Biology</item>
+        <item>Chemistry</item>
+        <item>Chicana and Chicano Studies</item>
+        <item>Communication</item>
+        <item>Speech, Language and Hearing Sciences</item>
+        <item>Economics</item>
+        <item>Education</item>
+        <item>English</item>
+        <item>French</item>
+        <item>Geography</item>
+        <item>History</item>
+        <item>Interdisciplinary Studies</item>
+        <item>Journalism and Media Studies</item>
+        <item>Latin American Studies</item>
+        <item>Liberal Arts and Sciences</item>
+        <item>Linguistics</item>
+        <item>Mathematics</item>
+        <item>Music</item>
+        <item>Philosophy</item>
+        <item>Physics</item>
+        <item>Political Science</item>
+        <item>Psychology</item>
+        <item>Rhetoric and Writing Studies</item>
+        <item>Sociology</item>
+        <item>Spanish</item>
+        <item>Television, Film and New Media Production</item>
+        <item>Theatre Arts</item>
+        <item>Women's Studies</item>
+    </string-array>
+
+    <string-array name="master_of_science">
+        <item>Accountancy</item>
+        <item>Aerospace Engineering</item>
+        <item>Applied Mathematics</item>
+        <item>Astronomy</item>
+        <item>Bioengineering</item>
+        <item>Biology</item>
+        <item>Bioinformatics and Medical Informatics</item>
+        <item>Biomedical Quality Systems</item>
+        <item>Business Administration</item>
+        <item>Chemistry</item>
+        <item>Child Development</item>
+        <item>Civil Engineering</item>
+        <item>Computational Science</item>
+        <item>Computer Science</item>
+        <item>Counseling</item>
+        <item>Criminal Justice and Criminology</item>
+        <item>Electrical Engineering</item>
+        <item>Exercise Physiology</item>
+        <item>Geography</item>
+        <item>Geological Sciences</item>
+        <item>Gerontology</item>
+        <item>Homeland Security</item>
+        <item>Hospitality and Tourism Management</item>
+        <item>Information Systems</item>
+        <item>Interdisciplinary Studies</item>
+        <item>Kinesiology</item>
+        <item>Mechanical Engineering</item>
+        <item>Medical Physics</item>
+        <item>Microbiology</item>
+        <item>Nursing</item>
+        <item>Nutritional Sciences</item>
+        <item>Physics</item>
+        <item>Psychology</item>
+        <item>Public Health</item>
+        <item>Regulatory Affairs</item>
+        <item>Rehabilitation Counseling</item>
+        <item>Statistics</item>
+    </string-array>
+
+    <string-array name="master_of_fine_arts">
+        <item>Art</item>
+        <item>Creative Writing</item>
+        <item>Design and Technical Theatre</item>
+        <item>Musical Theatre</item>
+        <item>Theatre Arts</item>
+    </string-array>
+
+    <string-array name="professional_masters_degrees">
+        <item>Master of Business Administration (MBA)</item>
+        <item>Master of City Planning (MCP)</item>
+        <item>Master of Engineering (ME)</item>
+        <item>Master of Music (MM)</item>
+        <item>Master of Public Administration (MPA)</item>
+        <item>Master of Public Health (MPH)</item>
+        <item>Master of Social Work (MSW)</item>
+    </string-array>
+
+
+</resources>
