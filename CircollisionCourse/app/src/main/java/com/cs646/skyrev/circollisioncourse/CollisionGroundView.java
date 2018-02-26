@@ -24,6 +24,8 @@ public class CollisionGroundView extends View implements View.OnTouchListener {
     int screenWidth;
     int screenHeight;
     int circleCount;
+    float currentX;
+    float currentY;
 
     static Paint paint;
     static {
@@ -49,6 +51,9 @@ public class CollisionGroundView extends View implements View.OnTouchListener {
             canvas.drawCircle(currentCircle.getCentreX(), currentCircle.getCentreY(),
                     currentCircle.getRadius(), CollisionGroundView.paint);
             scaleCircle();
+        }
+        else {
+            moveCircle();
         }
         for(Circle circle : circles) {
             canvas.drawCircle(circle.getCentreX(), circle.getCentreY(), circle.getRadius(),
@@ -79,11 +84,11 @@ public class CollisionGroundView extends View implements View.OnTouchListener {
     }
 
     private boolean handleActionDown(MotionEvent event) {
-        float x = event.getX();
-        float y = event.getY();
-        if(circleCount < 15 && !isOverlapping(x, y)) {
+        currentX = event.getX();
+        currentY = event.getY();
+        if(circleCount < 15 && !isOverlapping(currentX, currentY)) {
             scaling = true;
-            currentCircle = new Circle(x, y);
+            currentCircle = new Circle(currentX, currentY);
             scaleCircle();
         }
         else {
@@ -93,7 +98,12 @@ public class CollisionGroundView extends View implements View.OnTouchListener {
     }
 
     private boolean handleActionMove(MotionEvent event) {
-
+        currentX = event.getX();
+        currentY = event.getY();
+        if(isOverlapping(currentX, currentY)) {
+            scaling = false;
+            moveCircle();
+        }
         return true;
     }
 
@@ -143,20 +153,29 @@ public class CollisionGroundView extends View implements View.OnTouchListener {
 
     // checks if the circle being drawn collides with the vertical edges of the screen
     private boolean isXOutOfBounds(float x, float r) {
-        if(x + r > screenWidth)
-            return true;
-        if(x - r < 0)
+        if(x + r > screenWidth || x - r < 0)
             return true;
         return false;
     }
 
     // checks if the circle being drawn collides with the horizontal edges of the screen
     private boolean isYOutOfBounds(float y, float r) {
-        if(y + r > screenHeight)
-            return true;
-        if(y - r < 0)
+        if(y + r > screenHeight || y - r < 0)
             return true;
         return false;
+    }
+
+    // returns the selected circle
+    private Circle getSelectedCircle() {
+        for(Circle circle : circles) {
+            double distance = Math.sqrt(
+                    Math.pow(currentX - circle.getCentreX(), 2)
+                            + Math.pow(currentY - circle.getCentreY(), 2)
+            );
+            if(distance < circle.getRadius())
+                return circle;
+        }
+        return null;
     }
 
     // scales the circle being drawn
@@ -178,7 +197,12 @@ public class CollisionGroundView extends View implements View.OnTouchListener {
 
     // sets the selected circle in motion with velocity of the swipe
     private void moveCircle() {
-
+        Circle selectedCircle = getSelectedCircle();
+        if(selectedCircle != null && !isColliding(currentX, currentY, selectedCircle.getRadius())) {
+            selectedCircle.setCentreX(currentX);
+            selectedCircle.setCentreY(currentY);
+            invalidate();
+        }
     }
 
 }

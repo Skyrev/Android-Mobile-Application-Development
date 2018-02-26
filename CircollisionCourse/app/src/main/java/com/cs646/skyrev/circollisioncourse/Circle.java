@@ -10,10 +10,6 @@ public class Circle {
 
     private float radius;
 
-    public Circle() {
-        //
-    }
-
     public Circle(float centreX, float centreY) {
         this.centreX = centreX;
         this.centreY = centreY;
