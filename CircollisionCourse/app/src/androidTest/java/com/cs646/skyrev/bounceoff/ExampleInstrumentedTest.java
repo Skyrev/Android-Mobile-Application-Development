@@ -1,4 +1,4 @@
-package com.cs646.skyrev.circollisioncourse;
+package com.cs646.skyrev.bounceoff;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

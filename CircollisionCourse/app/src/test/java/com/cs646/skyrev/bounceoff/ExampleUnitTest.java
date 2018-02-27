@@ -1,4 +1,4 @@
-package com.cs646.skyrev.circollisioncourse;
+package com.cs646.skyrev.bounceoff;
 
 import org.junit.Test;
 

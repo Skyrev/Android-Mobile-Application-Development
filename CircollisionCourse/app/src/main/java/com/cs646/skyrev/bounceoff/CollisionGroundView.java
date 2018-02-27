@@ -1,4 +1,4 @@
-package com.cs646.skyrev.circollisioncourse;
+package com.cs646.skyrev.bounceoff;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -51,7 +51,6 @@ public class CollisionGroundView extends View implements View.OnTouchListener {
         setOnTouchListener(this);
     }
 
-
     @Override
     protected void onDraw(Canvas canvas) {
         if(scaling) {
@@ -93,8 +92,8 @@ public class CollisionGroundView extends View implements View.OnTouchListener {
     }
 
     private boolean handleActionDown(MotionEvent event) {
-        velocityTracker = VelocityTracker.obtain();
-        velocityTracker.addMovement(event);
+        if(velocityTracker == null)
+            velocityTracker = VelocityTracker.obtain();
         currentX = event.getX();
         currentY = event.getY();
         if(circleCount < 15 && !isOverlapping(currentX, currentY)) {
@@ -245,18 +244,32 @@ public class CollisionGroundView extends View implements View.OnTouchListener {
                 float vx = circle.getVeloX();
                 float vy = circle.getVeloY();
 
-                if(!isXOutOfBounds(x, r) && !isXOutOfBounds(x+vx, r))
+                if (!isXOutOfBounds(x, r) && !isXOutOfBounds(x + vx, r))
                     circle.setCentreX(x + vx);
                 else
                     circle.setVeloX(vx * dampingFactor);
 
-                if(!isYOutOfBounds(y, r) && !isYOutOfBounds(y+vy, r))
+                if (!isYOutOfBounds(y, r) && !isYOutOfBounds(y + vy, r))
                     circle.setCentreY(y + vy);
                 else
                     circle.setVeloY(vy * dampingFactor);
             }
         }
         invalidate();
+    }
+
+    // reset view
+    public void reset() {
+        scaling = false;
+        dragging = false;
+        currentCircle = null;
+        currentX = 0.0f;
+        currentY = 0.0f;
+        veloX = 0.0f;
+        veloY = 0.0f;
+        circles.clear();
+        circleCount = 0;
+        velocityTracker = null;
     }
 
 }
