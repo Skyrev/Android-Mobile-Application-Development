@@ -26,6 +26,9 @@ public class CollisionGroundView extends View implements View.OnTouchListener {
     int circleCount;
     float currentX;
     float currentY;
+    float veloX;
+    float veloY;
+    float dampingFactor = -0.9f;
 
     Circle currentCircle;
     VelocityTracker velocityTracker;
@@ -56,9 +59,10 @@ public class CollisionGroundView extends View implements View.OnTouchListener {
                     currentCircle.getRadius(), CollisionGroundView.paint);
             scaleCircle();
         }
-        else {
+        else if(dragging){
             dragCircle();
         }
+        moveCircle();
         for(Circle circle : circles) {
             if (circle != null)
                 canvas.drawCircle(circle.getCentreX(), circle.getCentreY(), circle.getRadius(),
@@ -89,6 +93,8 @@ public class CollisionGroundView extends View implements View.OnTouchListener {
     }
 
     private boolean handleActionDown(MotionEvent event) {
+        velocityTracker = VelocityTracker.obtain();
+        velocityTracker.addMovement(event);
         currentX = event.getX();
         currentY = event.getY();
         if(circleCount < 15 && !isOverlapping(currentX, currentY)) {
@@ -103,6 +109,7 @@ public class CollisionGroundView extends View implements View.OnTouchListener {
     }
 
     private boolean handleActionMove(MotionEvent event) {
+        velocityTracker.addMovement(event);
         currentX = event.getX();
         currentY = event.getY();
 
@@ -115,13 +122,24 @@ public class CollisionGroundView extends View implements View.OnTouchListener {
     }
 
     private boolean handleActionUp(MotionEvent event) {
-        if(dragging) {
-            // move circle in direction of swipe
-        }
+        velocityTracker.addMovement(event);
+        velocityTracker.computeCurrentVelocity(10);
+        veloX = velocityTracker.getXVelocity();
+        veloY = velocityTracker.getYVelocity();
+
         if(circleCount < 15) {
             circles.add(currentCircle);
             circleCount = circles.size();
         }
+
+        if(dragging) {
+            if(currentCircle != null) {
+                currentCircle.setVeloX(veloX);
+                currentCircle.setVeloY(veloY);
+            }
+            moveCircle();
+        }
+
         scaling = false;
         dragging = false;
         return true;
@@ -142,25 +160,17 @@ public class CollisionGroundView extends View implements View.OnTouchListener {
         return false;
     }
 
-    // checks if the circle being drawn collides with the screen edge and/or an existing circle
-    private boolean isColliding(float x, float y, float r) {
-        boolean isOutOfBounds = isXOutOfBounds(x, r) || isYOutOfBounds(y, r);
-
-        // check if the circle being drawn collides with the screen edges
-        if(isOutOfBounds)
-            return true;
-        else {
-            // check if the circle being drawn collides with an existing circle
-            for (Circle circle : circles) {
-                if(circle != null) {
-                    double distance = Math.sqrt(
-                            Math.pow(x - circle.getCentreX(), 2)
-                                    + Math.pow(y - circle.getCentreY(), 2)
-                    );
-                    double difference = Math.abs(distance - (circle.getRadius() + r));
-                    if (difference >= 0 && difference <= 2)
-                        return true;
-                }
+    // checks if the circle being drawn collides with an existing circle
+    private boolean isCollidingWithOtherCircle(float x, float y, float r) {
+        for (Circle circle : circles) {
+            if(circle != null) {
+                double distance = Math.sqrt(
+                        Math.pow(x - circle.getCentreX(), 2)
+                                + Math.pow(y - circle.getCentreY(), 2)
+                );
+                double difference = Math.floor(Math.abs(distance - (circle.getRadius() + r)));
+                if (difference >= 0 && difference <= 2)
+                    return true;
             }
         }
         return false;
@@ -168,14 +178,14 @@ public class CollisionGroundView extends View implements View.OnTouchListener {
 
     // checks if the circle being drawn collides with the vertical edges of the screen
     private boolean isXOutOfBounds(float x, float r) {
-        if(x + r > screenWidth || x - r < 0)
+        if(x + r >= screenWidth || x - r <= 0.0f)
             return true;
         return false;
     }
 
     // checks if the circle being drawn collides with the horizontal edges of the screen
     private boolean isYOutOfBounds(float y, float r) {
-        if(y + r > screenHeight || y - r < 0)
+        if(y + r >= screenHeight || y - r <= 0)
             return true;
         return false;
     }
@@ -201,8 +211,9 @@ public class CollisionGroundView extends View implements View.OnTouchListener {
             float x = currentCircle.getCentreX();
             float y = currentCircle.getCentreY();
             float r = currentCircle.getRadius();
-            if (!isOverlapping(x, y) && !isColliding(x, y, r)) {
-
+            if (!isOverlapping(x, y)
+                    && !(isXOutOfBounds(x, r) || isYOutOfBounds(y, r))
+                    && !isCollidingWithOtherCircle(x, y, r)) {
                 currentCircle.setRadius(currentCircle.getRadius() + 2);
             }
             invalidate();
@@ -214,7 +225,9 @@ public class CollisionGroundView extends View implements View.OnTouchListener {
         if(dragging) {
             currentCircle = getSelectedCircle();
             if(currentCircle != null
-                    && !isColliding(currentX, currentY, currentCircle.getRadius())) {
+                    && !(isXOutOfBounds(currentX, currentCircle.getRadius())
+                        || isYOutOfBounds(currentY, currentCircle.getRadius()))
+                    && !isCollidingWithOtherCircle(currentX, currentY, currentCircle.getRadius())) {
                 currentCircle.setCentreX(currentX);
                 currentCircle.setCentreY(currentY);
                 invalidate();
@@ -222,8 +235,28 @@ public class CollisionGroundView extends View implements View.OnTouchListener {
         }
     }
 
-    // moves the circle in the direction of the swipe
+    // moves the circle in the direction of the swipe/collision
     private void moveCircle() {
+        for(Circle circle : circles) {
+            if(circle != null) {
+                float x = circle.getCentreX();
+                float y = circle.getCentreY();
+                float r = circle.getRadius();
+                float vx = circle.getVeloX();
+                float vy = circle.getVeloY();
 
+                if(!isXOutOfBounds(x, r) && !isXOutOfBounds(x+vx, r))
+                    circle.setCentreX(x + vx);
+                else
+                    circle.setVeloX(vx * dampingFactor);
+
+                if(!isYOutOfBounds(y, r) && !isYOutOfBounds(y+vy, r))
+                    circle.setCentreY(y + vy);
+                else
+                    circle.setVeloY(vy * dampingFactor);
+            }
+        }
+        invalidate();
     }
+
 }
