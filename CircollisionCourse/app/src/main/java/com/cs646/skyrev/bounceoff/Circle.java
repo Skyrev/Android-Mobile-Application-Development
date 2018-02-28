@@ -42,6 +42,7 @@ public class Circle {
     public void setRadius(float radius) {
         this.radius = radius;
     }
+
     public float getVeloX() {
         return veloX;
     }
