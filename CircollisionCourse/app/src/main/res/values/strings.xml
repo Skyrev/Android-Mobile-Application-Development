@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Bounce Off</string>
+    <string name="msg">Tap and hold to draw circle.\nHold and swipe to set it in motion.</string>
     <string name="reset">Reset</string>
 </resources>
