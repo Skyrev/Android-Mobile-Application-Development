@@ -25,8 +25,6 @@ public class CollisionGroundView extends View implements View.OnTouchListener {
     int circleCount;
     float currentX;
     float currentY;
-    float veloX;
-    float veloY;
     float dampingFactor = -0.9f;
 
     Circle currentCircle;
@@ -87,33 +85,31 @@ public class CollisionGroundView extends View implements View.OnTouchListener {
     }
 
     private boolean handleActionDown(MotionEvent event) {
-        if(velocityTracker == null)
-            velocityTracker = VelocityTracker.obtain();
         currentX = event.getX();
         currentY = event.getY();
-        if(circleCount < 15 && !isOverlapping(currentX, currentY)) {
-            scaling = true;
+
+        if(velocityTracker == null)
+            velocityTracker = VelocityTracker.obtain();
+
+        scaling = circleCount < 15 && !isOverlapping(currentX, currentY);
+        if(scaling) {
             currentCircle = new Circle(currentX, currentY);
             scaleCircle();
         }
-        else
-            scaling = false;
         return true;
     }
 
     private boolean handleActionMove(MotionEvent event) {
         currentX = event.getX();
         currentY = event.getY();
-        velocityTracker.addMovement(event);
-        velocityTracker.computeCurrentVelocity(10);
-        veloX = velocityTracker.getXVelocity();
-        veloY = velocityTracker.getYVelocity();
 
         if(isOverlapping(currentX, currentY)) {
             currentCircle = getSelectedCircle();
             if (currentCircle != null) {
-                currentCircle.setVeloX(veloX);
-                currentCircle.setVeloY(veloY);
+                velocityTracker.addMovement(event);
+                velocityTracker.computeCurrentVelocity(10);
+                currentCircle.setVeloX(velocityTracker.getXVelocity());
+                currentCircle.setVeloY(velocityTracker.getYVelocity());
                 moveCircle();
             }
         }
@@ -130,7 +126,7 @@ public class CollisionGroundView extends View implements View.OnTouchListener {
         return true;
     }
 
-    // checks if the centre of the circle being drawn is inside an existing circle
+    // checks if the point (x, y) touched on the screen is inside an existing circle
     private boolean isOverlapping(float x, float y) {
         for(Circle circle : circles) {
             if(circle != null) {
@@ -145,7 +141,7 @@ public class CollisionGroundView extends View implements View.OnTouchListener {
         return false;
     }
 
-    // checks if the circle being drawn collides with an existing circle
+    // checks if the circle (x, y, r) being drawn collides with an existing circle
     private boolean isCollidingWithOtherCircle(float x, float y, float r) {
         for (Circle circle : circles) {
             if(circle != null) {
@@ -231,8 +227,6 @@ public class CollisionGroundView extends View implements View.OnTouchListener {
         currentCircle = null;
         currentX = 0.0f;
         currentY = 0.0f;
-        veloX = 0.0f;
-        veloY = 0.0f;
         circles.clear();
         circleCount = 0;
         velocityTracker = null;
