@@ -1,24 +1,43 @@
-Currency Convert<br>
--- Objectives<br>
-   Learn how to use Android Studio to create an Android app<br>
-   Use basic GUI widgets<br>
-   Handle Screen rotation<br>
--- Convert currency value from USD to INR and vice versa<br>
+<h2>Currency Convert</h2>
+<ul>
+   <li>Objectives
+   <ul>
+      <li>Learn how to use Android Studio to create an Android app</li>
+      <li>Use basic GUI widgets</li>
+      <li>Handle Screen rotation</li>
+   </ul>
+   </li>
+   <li>Convert currency value from USD to INR and vice versa</li>
+</ul>
 
-Personal Information<br>
--- Objectives<br>
-   Use some basic UI widgets<br>
-   Use Intents to call other Activities<br>
-   Handling the Keyboard<br>
-   Using Fragments<br>
-   Permanent storage<br>
--- Stores information entered in the form permanently on the device<br>
--- The list of available courses (part of the data to be stored) are displayed using fragments<br>
+<hr>
 
-Collision Course (aka Bounce Off)<br>
--- Objectives<br>
-   Handle touch events<br>
-   Use 2D graphics<br>
--- Tap and hold to create circles<br>
--- Hold circle and swipe to move it in the swiped direction<br>
--- Circles bounce off screen edges<br>
+<h2>Personal Information</h2>
+<ul>
+   <li>Objectives
+   <ul>
+      <li>Use some basic UI widgets</li>
+      <li>Use Intents to call other Activities</li>
+      <li>Handling the Keyboard</li>
+      <li>Using Fragments</li>
+      <li>Permanent storage</li>
+   </ul>
+   </li>  
+<li>Stores information entered in the form permanently on the device</li>
+<li>The list of available courses (part of the data to be stored) are displayed using fragments</li>
+</ul>
+
+<hr>
+
+<h2>Collision Course (aka Bounce Off)</h2>
+<ul>
+   <li>Objectives
+   <ul>
+      <li>Handle touch events</li>
+      <li>Use 2D graphics</li>
+   </ul>
+   </li>
+<li>Tap and hold to create circles</li>
+<li>Hold circle and swipe to move it in the swiped direction</li>
+<li>Circles bounce off screen edges</li>
+</ul>
