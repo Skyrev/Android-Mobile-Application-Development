@@ -110,7 +110,7 @@ public class CollisionGroundView extends View implements View.OnTouchListener {
             currentCircle = getSelectedCircle();
             if (currentCircle != null) {
                 velocityTracker.addMovement(event);
-                velocityTracker.computeCurrentVelocity(10);
+                velocityTracker.computeCurrentVelocity(100);
                 currentCircle.setVeloX(velocityTracker.getXVelocity());
                 currentCircle.setVeloY(velocityTracker.getYVelocity());
                 moveCircle();

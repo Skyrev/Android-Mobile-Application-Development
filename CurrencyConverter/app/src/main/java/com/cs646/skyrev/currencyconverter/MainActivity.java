@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     EditText usdInput;
     EditText inrInput;
     double usdToInr = 63.89;
-    double inrToUsd = 0.016;
+    double inrToUsd = 1/usdToInr;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
