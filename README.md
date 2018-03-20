@@ -15,7 +15,7 @@ Personal Information<br>
 -- Stores information entered in the form permanently on the device<br>
 -- The list of available courses (part of the data to be stored) are displayed using fragments<br>
 
-Bounce Off<br>
+Collision Course (aka Bounce Off)<br>
 -- Objectives<br>
    Handle touch events<br>
    Use 2D graphics<br>
