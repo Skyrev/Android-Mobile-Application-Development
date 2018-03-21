@@ -1,4 +1,5 @@
 <h2>Currency Convert</h2>
+<img src='CurrencyConvert.jpg' width='auto' height='300px'>
 <ul>
    <li>Objectives
    <ul>
@@ -13,6 +14,7 @@
 <br>
 
 <h2>Personal Information</h2>
+<img src='PersonalInformation.jpg' width='1000px' height='auto'>
 <ul>
    <li>Objectives
    <ul>
@@ -30,6 +32,7 @@
 <br>
 
 <h2>Collision Course (aka Bounce Off)</h2>
+<img src='BounceOff.jpg' width='auto' height='300px'>
 <ul>
    <li>Objectives
    <ul>
