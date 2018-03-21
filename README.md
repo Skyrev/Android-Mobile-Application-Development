@@ -10,7 +10,7 @@
    <li>Convert currency value from USD to INR and vice versa</li>
 </ul>
 
-<hr>
+<br>
 
 <h2>Personal Information</h2>
 <ul>
@@ -27,7 +27,7 @@
 <li>The list of available courses (part of the data to be stored) are displayed using fragments</li>
 </ul>
 
-<hr>
+<br>
 
 <h2>Collision Course (aka Bounce Off)</h2>
 <ul>
@@ -41,3 +41,5 @@
 <li>Hold circle and swipe to move it in the swiped direction</li>
 <li>Circles bounce off screen edges</li>
 </ul>
+
+<br>
