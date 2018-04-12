@@ -1,5 +1,5 @@
 <h2>Currency Convert</h2>
-<img src='CurrencyConvert.jpg' width='auto' height='300px'>
+<img src='Screenshots/CurrencyConvert.jpg' width='auto' height='300px'>
 <ul>
    <li>Objectives
    <ul>
@@ -14,7 +14,7 @@
 <br>
 
 <h2>Personal Information</h2>
-<img src='PersonalInformation.jpg' width='1000px' height='auto'>
+<img src='Screenshots/PersonalInformation.jpg' width='1000px' height='auto'>
 <ul>
    <li>Objectives
    <ul>
@@ -32,7 +32,7 @@
 <br>
 
 <h2>Collision Course (aka Bounce Off)</h2>
-<img src='BounceOff.jpg' width='auto' height='300px'>
+<img src='Screenshots/BounceOff.jpg' width='auto' height='300px'>
 <ul>
    <li>Objectives
    <ul>
@@ -43,6 +43,24 @@
 <li>Tap and hold to create circles</li>
 <li>Hold circle and swipe to move it in the swiped direction</li>
 <li>Circles bounce off screen edges</li>
+</ul>
+
+<br>
+
+<h2>Class Registration</h2>
+<img src='Screenshots/ClassRegistration.jpg' width='auto' height='300px'>
+<ul>
+   <li>Objectives
+   <ul>
+      <li>Network</li>
+   </ul>
+   </li>
+   <li>The app will allow users to register for classes</li>
+   <li>A student needs to enter their personal information - first name, last name, SDSU red id, email address and a password</li>
+   <li>The user can register for up to three courses and add themselves to waitlists for courses that are full</li>
+   <li>The student can also drop classes that they are registered for or drop themselves from waitlists</li>
+   <li>The app displays the courses the student is enrolled in and the courses that they are waitlisted for</li>
+   <li>The app stores the student's personal data on the device so that they do not have to enter the data each time they use the app</li>
 </ul>
 
 <br>
