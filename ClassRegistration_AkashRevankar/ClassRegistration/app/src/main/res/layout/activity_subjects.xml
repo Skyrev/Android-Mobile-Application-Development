@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cs646.skyrev.classregistration.SubjectsActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp">
+
+        <LinearLayout
+            android:id="@+id/progress_bar"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center">
+            <ProgressBar
+                android:id="@+id/indeterminateBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="@string/loading" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/label_subjects"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:textAlignment="center"
+            android:text="@string/label_subjects"
+            android:textSize="30sp" />
+
+        <LinearLayout
+            android:id="@+id/filter_container"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/label_subjects">
+
+            <TextView
+                android:id="@+id/label_filter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_filter"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textSize="18sp"/>
+
+            <LinearLayout
+                android:id="@+id/buttons_filter_container"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="7dp"
+                android:layout_gravity="center">
+
+                <Button
+                    android:id="@+id/button_filter_subject"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="3dp"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/button_round_blue"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                    android:onClick="filterSubject"
+                    android:text="@string/label_subject"/>
+
+                <Button
+                    android:id="@+id/button_filter_start_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginEnd="3dp"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/button_round_blue"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                    android:onClick="filterStartTime"
+                    android:text="@string/label_start_time"/>
+
+                <Button
+                    android:id="@+id/button_filter_level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="3dp"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/button_round_blue"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                    android:onClick="filterLevel"
+                    android:text="@string/label_level"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <Button
+                    android:id="@+id/clear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_weight="1"
+                    android:text="@string/label_clear"
+                    android:onClick="clearFilters"/>
+
+                <Button
+                    android:id="@+id/filter"
+                    android:layout_width="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:layout_weight="1"
+                    android:layout_height="50dp"
+                    android:text="@string/label_filter_button"
+                    android:onClick="fireFilteredIntent"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/label_more_details"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/filter_container"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center"
+            android:text="@string/label_more_details"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:id="@+id/subjects_list_container"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/label_more_details">
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

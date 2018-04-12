@@ -1,0 +1,134 @@
+<resources>
+
+    <string name="key_firstname">firstname</string>
+    <string name="key_lastname">lastname</string>
+    <string name="key_redid">redid</string>
+    <string name="key_email">email</string>
+    <string name="key_password">password</string>
+    <string name="key_subject_id">subjectid</string>
+    <string name="key_course_id">courseid</string>
+    <string name="key_class_id">classid</string>
+    <string name="key_class_ids">classids</string>
+    <string name="key_college">college</string>
+    <string name="key_classes">classes</string>
+    <string name="key_id">id</string>
+    <string name="key_title">title</string>
+    <string name="key_description">description</string>
+    <string name="key_schedule_no">schedule#</string>
+    <string name="key_course_no">course#</string>
+    <string name="key_department">department</string>
+    <string name="key_units">units</string>
+    <string name="key_instructor">instructor</string>
+    <string name="key_seats">seats</string>
+    <string name="key_waitlist">waitlist</string>
+    <string name="key_suffix">suffix</string>
+    <string name="key_start_time">startTime</string>
+    <string name="key_end_time">endTime</string>
+    <string name="key_meeting_type">meetingType</string>
+    <string name="key_building">building</string>
+    <string name="key_days">days</string>
+    <string name="key_prerequisite">prerequisite</string>
+    <string name="key_ok">ok</string>
+    <string name="key_error">error</string>
+
+    <string name="app_name">SDSU Class Registration</string>
+    <string name="label_first_name">First Name</string>
+    <string name="label_last_name">Last Name</string>
+    <string name="label_sdsu_red_id">SDSU RED ID</string>
+    <string name="label_email_id">Email ID</string>
+    <string name="label_password">Password</string>
+    <string name="label_reset">Reset</string>
+    <string name="label_login">Log In</string>
+    <string name="label_logout">Logout</string>
+
+    <string name="error_first_name">Invalid First Name</string>
+    <string name="error_last_name">Invalid Last Name</string>
+    <string name="error_sdsu_red_id">Invalid SDSU RED ID</string>
+    <string name="error_email_id">Invalid Email ID</string>
+    <string name="error_password">Password should have at least 8 characters and have 7 distinct characters</string>
+
+    <string name="response_error">Some error occurred. Please try again later.</string>
+    <string name="response_duplicate_red_id">Red Id already in use</string>
+    <string name="response_invalid_red_id">Invalid Red Id</string>
+    <string name="response_invalid_email">Invalid email no @</string>
+    <string name="response_invalid_password">Password too short</string>
+    <string name="response_add_failed">Could not add course. Some error occurred. Try again later.</string>
+    <string name="response_add_success">Course successfully added</string>
+    <string name="response_add_waitlist_success">Course successfully added to waitlist</string>
+    <string name="response_class_details_failure">Could not fetch course details. Try again later.</string>
+    <string name="response_drop_course_failed">Could not drop course. Try again later.</string>
+
+    <string name="label_more_details">Tap for more details</string>
+    <string name="label_more_course_details">Tap on course for more details</string>
+
+    <string name="footer">Akash Revankar 2018</string>
+
+    <string name="label_hi">Hi&#160;</string>
+    <string name="label_add_courses">Add Courses</string>
+    <string name="label_registered_courses">Registered Courses:&#160;</string>
+    <string name="label_waitlisted_courses">Waitlisted Courses:&#160;</string>
+
+    <string name="label_subjects">Subjects</string>
+    <string name="label_class_details">Class Details</string>
+
+    <string name="label_id">ID:&#160;</string>
+    <string name="label_title">Title:&#160;</string>
+    <string name="label_description">Description:&#160;</string>
+    <string name="label_building">Building:&#160;</string>
+    <string name="label_course_number">Course No.:&#160;</string>
+    <string name="label_meeting_type">Meeting Type:&#160;</string>
+    <string name="label_days">Days:&#160;</string>
+    <string name="label_prerequisite">Prerequisites:&#160;</string>
+    <string name="label_units">Units:&#160;</string>
+    <string name="label_college">College:&#160;</string>
+    <string name="label_classes">Classes:&#160;</string>
+    <string name="label_department">Dept:&#160;</string>
+    <string name="label_seats">Seats:&#160;</string>
+    <string name="label_waitlist">Waitlist:&#160;</string>
+    <string name="label_schedule_number">Schedule No.:&#160;</string>
+    <string name="label_time">Time:&#160;</string>
+    <string name="label_instructor">Instructor:&#160;</string>
+    <string name="time_suffix">&#160;hrs</string>
+
+    <string name="label_drop">Drop</string>
+    <string name="label_add">Add</string>
+    <string name="label_remove">Remove</string>
+    <string name="label_waitlist_course">Waitlist Course</string>
+    <string name="loading">Loading\nThis may take a few seconds</string>
+    <string name="label_drop_course">Drop Course</string>
+    <string name="label_remove_waitlisted_course">Remove From Waitlist</string>
+    <string name="label_drop_all_courses">Drop All Courses</string>
+    <string name="drop_all_courses_msg">Are you sure you want to drop all courses?</string>
+    <string name="drop_course_msg">Are you sure you want to drop this course?</string>
+    <string name="drop_waitlisted_course_msg">Are you sure you want to remove this course from waitlist?</string>
+    <string name="label_cancel">Cancel</string>
+    <string name="list_background_color">#ebebeb</string>
+    <string name="drop_button_background_color">#CC5852</string>
+
+    <string name="spaced_hyphen">&#160;&#8211;&#160;</string>
+    <string name="logout_msg">Are you sure you want to logout?</string>
+    <string name="time_clash">Unable to add course as this course and a course already registered meet within the same time frame</string>
+    <string name="label_filter">Show Classes Based On</string>
+    <string name="clear_all">Clear All</string>
+    <string name="key_subject_ids">subjectids</string>
+    <string name="label_subject">Subject</string>
+    <string name="label_start_time">Start Time</string>
+    <string name="label_level">Level</string>
+    <string name="key_level">level</string>
+    <string name="key_starttime">starttime</string>
+    <string name="label_filter_button">Filter</string>
+    <string name="label_set">Set</string>
+    <string name="start_time_title">Enter Start Time (24 hrs format)</string>
+    <string name="level_lower">Lower</string>
+    <string name="level_upper">Upper</string>
+    <string name="level_graduate">Graduate</string>
+    <string name="value_lower">lower</string>
+    <string name="value_upper">upper</string>
+    <string name="value_graduate">graduate</string>
+    <string name="label_clear">Clear</string>
+    <string name="no_filters">No filters applied</string>
+    <string name="no_subject_selected">No subject selected</string>
+    <string name="level_all">All</string>
+    <string name="value_all">all</string>
+
+</resources>
