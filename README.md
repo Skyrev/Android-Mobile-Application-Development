@@ -48,7 +48,7 @@
 <br>
 
 <h2>Class Registration</h2>
-<img src='Screenshots/ClassRegistration.jpg' width='auto' height='300px'>
+<img src='Screenshots/ClassRegistration.jpg' width='auto' height='auto'>
 <ul>
    <li>Objectives
    <ul>
