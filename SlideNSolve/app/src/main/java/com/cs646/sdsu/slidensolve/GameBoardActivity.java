@@ -109,9 +109,11 @@ public class GameBoardActivity extends AppCompatActivity {
                 alertDialog.setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        isPaused = false;
-                        elapsedTime.setBase(elapsedTime.getBase() + SystemClock.elapsedRealtime() - pausedTime);
-                        elapsedTime.start();
+                        if(!isPaused) {
+                            isPaused = false;
+                            elapsedTime.setBase(elapsedTime.getBase() + SystemClock.elapsedRealtime() - pausedTime);
+                            elapsedTime.start();
+                        }
                         dialog.cancel();
                     }
                 });
