@@ -162,20 +162,6 @@
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/id_main_menu_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/id_options_container"
-        android:fontFamily="@font/reem_kufi"
-        android:text="@string/main_menu"
-        android:background="@drawable/button_shape"
-        android:layout_marginTop="20dp"
-        android:paddingStart="10dp"
-        android:paddingEnd="10dp"
-        android:layout_centerHorizontal="true"
-        style="?android:attr/buttonBarButtonStyle" />
-
     <include layout="@layout/layout_sign_in"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

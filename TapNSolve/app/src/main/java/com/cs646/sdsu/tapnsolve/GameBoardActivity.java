@@ -48,7 +48,6 @@ public class GameBoardActivity extends AppCompatActivity {
     private GridLayout puzzleContainer;
     private Button startPause;
     private Button reset;
-    private Button mainMenu;
     private Chronometer elapsedTime;
     private CountDownTimer countDownTimer;
     private TextView countDownTimerText;
@@ -212,55 +211,47 @@ public class GameBoardActivity extends AppCompatActivity {
             }
         });
 
-        mainMenu = this.findViewById(R.id.id_main_menu_button);
-        mainMenu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(!isPaused) {
-                    if(timed) {
-                        pauseCountDownTimer();
-                    }
-                    else {
-                        isPaused = true;
-                        pausedTime = SystemClock.elapsedRealtime();
-                        elapsedTime.stop();
-                        startPause.setText(R.string.start);
-                    }
-                }
-
-                AlertDialog.Builder alertDialog = new AlertDialog.Builder(GameBoardActivity.this);
-                alertDialog.setMessage(getString(R.string.msg_quit_round));
-                alertDialog.setCancelable(false);
-                alertDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        goToMainMenu();
-                    }
-                });
-                alertDialog.setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        if(!isPaused) {
-                            isPaused = false;
-                            elapsedTime.setBase(elapsedTime.getBase() + SystemClock.elapsedRealtime() - pausedTime);
-                            elapsedTime.start();
-                        }
-                        dialog.cancel();
-                    }
-                });
-
-                AlertDialog alert = alertDialog.create();
-                alert.setTitle(R.string.title_quit_round);
-                alert.show();
-            }
-        });
-
         vibrator = (Vibrator)getSystemService(Context.VIBRATOR_SERVICE);
     }
 
     @Override
     public void onBackPressed() {
-        mainMenu.performClick();
+        if(!isPaused) {
+            if(timed) {
+                pauseCountDownTimer();
+            }
+            else {
+                isPaused = true;
+                pausedTime = SystemClock.elapsedRealtime();
+                elapsedTime.stop();
+                startPause.setText(R.string.start);
+            }
+        }
+
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(GameBoardActivity.this);
+        alertDialog.setMessage(getString(R.string.msg_quit_round));
+        alertDialog.setCancelable(false);
+        alertDialog.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                goToMainMenu();
+            }
+        });
+        alertDialog.setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                if(!isPaused) {
+                    isPaused = false;
+                    elapsedTime.setBase(elapsedTime.getBase() + SystemClock.elapsedRealtime() - pausedTime);
+                    elapsedTime.start();
+                }
+                dialog.cancel();
+            }
+        });
+
+        AlertDialog alert = alertDialog.create();
+        alert.setTitle(R.string.title_quit_round);
+        alert.show();
     }
 
     @Override
