@@ -12,34 +12,31 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <activity
             android:name=".SplashScreenActivity"
-            android:theme="@style/SplashTheme"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".MainMenuActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".GameBoardActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait" />
-
-        <activity android:name=".SuccessActivity"
+        <activity
+            android:name=".SuccessActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait" />
-
-        <activity android:name=".LeaderBoardActivity"
+        <activity
+            android:name=".LeaderBoardActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait" />
 
@@ -47,6 +44,7 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
+        <activity android:name=".AboutActivity"></activity>
     </application>
 
 </manifest>

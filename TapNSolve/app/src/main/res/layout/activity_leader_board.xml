@@ -17,6 +17,20 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true" />
 
+        <Button
+            android:id="@+id/id_about_button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_below="@id/id_app_title"
+            android:layout_alignParentEnd="true"
+            android:fontFamily="@font/reem_kufi"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="@string/about" />
+
         <TextView
             android:id="@+id/id_leaderboard"
             android:layout_width="match_parent"

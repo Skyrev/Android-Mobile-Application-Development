@@ -12,6 +12,20 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true" />
 
+    <Button
+        android:id="@+id/id_about_button"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_below="@id/id_app_title"
+        android:layout_alignParentEnd="true"
+        android:fontFamily="@font/reem_kufi"
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:text="@string/about" />
+
     <TextView
         android:id="@+id/id_great_job"
         android:layout_width="match_parent"
@@ -38,7 +52,7 @@
             android:fontFamily="@font/reem_kufi"
             android:text="@string/your_score"
             android:textAlignment="center"
-            android:textSize="20sp"
+            android:textSize="22sp"
             android:textColor="@android:color/black" />
 
         <TextView
@@ -47,7 +61,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/reem_kufi"
             android:textAlignment="center"
-            android:textSize="24sp"
+            android:textSize="32sp"
             android:textColor="@android:color/black"/>
     </LinearLayout>
 
@@ -73,7 +87,7 @@
                 android:fontFamily="@font/reem_kufi"
                 android:text="@string/time_taken"
                 android:textAlignment="center"
-                android:textSize="20sp"
+                android:textSize="22sp"
                 android:textColor="@android:color/black"/>
 
             <TextView
@@ -82,7 +96,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/reem_kufi"
                 android:textAlignment="center"
-                android:textSize="18sp"
+                android:textSize="32sp"
                 android:textColor="@android:color/black"/>
 
         </LinearLayout>
@@ -100,7 +114,7 @@
                 android:fontFamily="@font/reem_kufi"
                 android:text="@string/moves"
                 android:textAlignment="center"
-                android:textSize="20sp"
+                android:textSize="22sp"
                 android:textColor="@android:color/black"/>
 
             <TextView
@@ -109,7 +123,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/reem_kufi"
                 android:textAlignment="center"
-                android:textSize="18sp"
+                android:textSize="32sp"
                 android:textColor="@android:color/black"/>
 
         </LinearLayout>

@@ -52,6 +52,15 @@ public class MainMenuActivity extends AppCompatActivity {
 
         firebaseAuth = FirebaseAuth.getInstance();
 
+        Button about = this.findViewById(R.id.id_about_button);
+        about.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent about = new Intent(MainMenuActivity.this, AboutActivity.class);
+                startActivity(about);
+            }
+        });
+
         signIn = this.findViewById(R.id.id_sign_in);
         signIn.setOnClickListener(new View.OnClickListener() {
             @Override

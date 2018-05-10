@@ -1,5 +1,6 @@
 package com.cs646.sdsu.tapnsolve;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.support.v4.content.ContextCompat;
@@ -9,6 +10,7 @@ import android.os.Bundle;
 import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
@@ -38,6 +40,15 @@ public class LeaderBoardActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_leader_board);
+
+        Button about = this.findViewById(R.id.id_about_button);
+        about.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent about = new Intent(LeaderBoardActivity.this, AboutActivity.class);
+                startActivity(about);
+            }
+        });
 
         emptyLeaderBoard = this.findViewById(R.id.id_empty_leaderboard_msg);
         emptyLeaderBoard.setVisibility(View.GONE);

@@ -37,6 +37,15 @@ public class SuccessActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_success);
 
+        Button about = this.findViewById(R.id.id_about_button);
+        about.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent about = new Intent(SuccessActivity.this, AboutActivity.class);
+                startActivity(about);
+            }
+        });
+
         firebaseAuth = FirebaseAuth.getInstance();
         currentUser = firebaseAuth.getCurrentUser();
 
@@ -81,11 +90,10 @@ public class SuccessActivity extends AppCompatActivity {
         final String time = intentFromGameBoard.getStringExtra(getString(R.string.key_time));
         final int moves = intentFromGameBoard.getIntExtra(getString(R.string.key_moves), 0);
         final int score = intentFromGameBoard.getIntExtra(getString(R.string.key_score), 0);
-        final String username = currentUser != null ? currentUser.getDisplayName() : getString(R.string.player);
 
         timeTakenView.setText(time);
-        movesView.setText(moves);
-        scoreView.setText(score);
+        movesView.setText(moves+"");
+        scoreView.setText(score+"");
 
         final DatabaseReference leaderBoardReference = FirebaseDatabase.getInstance().getReference(getString(R.string.key_leaderboard));
 
@@ -106,6 +114,7 @@ public class SuccessActivity extends AppCompatActivity {
                 currentUser = firebaseAuth.getCurrentUser();
                 if(currentUser != null) {
                     String userId = currentUser.getUid();
+                    String username = currentUser.getDisplayName();
                     LeaderBoardEntry entry = new LeaderBoardEntry(userId, difficulty, mode, username, time, moves, score);
                     String id = leaderBoardReference.push().getKey();
                     leaderBoardReference.child(id).setValue(entry);

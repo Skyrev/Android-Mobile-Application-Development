@@ -78,6 +78,15 @@ public class GameBoardActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_board);
 
+        Button about = this.findViewById(R.id.id_about_button);
+        about.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent about = new Intent(GameBoardActivity.this, AboutActivity.class);
+                startActivity(about);
+            }
+        });
+
         firebaseAuth = FirebaseAuth.getInstance();
         currentUser = firebaseAuth.getCurrentUser();
 
