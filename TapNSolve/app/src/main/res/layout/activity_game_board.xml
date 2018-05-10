@@ -6,18 +6,10 @@
     android:background="@color/colorGameBoard"
     tools:context="com.cs646.sdsu.tapnsolve.GameBoardActivity">
 
-    <TextView
+    <include layout="@layout/layout_title"
         android:id="@+id/id_app_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/reem_kufi"
-        android:text="@string/app_name"
-        android:textSize="42sp"
-        android:textColor="@android:color/black"
-        android:textAlignment="center"
-        android:background="@drawable/border_black"
-        android:paddingTop="15dp"
-        android:paddingBottom="15dp"
         android:layout_alignParentTop="true" />
 
     <LinearLayout
@@ -25,7 +17,7 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="7dp"
         android:layout_below="@+id/id_app_title"
         android:gravity="center">
 
@@ -56,7 +48,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/id_toggle_buttons"
         android:layout_alignStart="@id/id_puzzle_container"
-        android:layout_marginTop="30dp">
+        android:layout_marginTop="10dp">
 
         <ImageView
             android:layout_width="25dp"
@@ -93,7 +85,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/id_toggle_buttons"
         android:layout_alignEnd="@id/id_puzzle_container"
-        android:layout_marginTop="30dp">
+        android:layout_marginTop="10dp">
 
         <TextView
             android:id="@+id/id_moves_taken"
@@ -134,14 +126,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/id_puzzle_container"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"
         style="?android:attr/buttonBarStyle" >
 
         <Button
             android:id="@+id/id_start_pause_button"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_marginEnd="20dp"
             android:background="@drawable/button_shape"
             android:text="@string/start"
@@ -151,8 +143,8 @@
 
         <Button
             android:id="@+id/id_reset_button"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_marginStart="20dp"
             android:background="@drawable/button_shape"
             android:text="@string/reset"

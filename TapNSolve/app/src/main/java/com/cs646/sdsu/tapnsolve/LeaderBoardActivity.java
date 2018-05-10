@@ -48,7 +48,7 @@ public class LeaderBoardActivity extends AppCompatActivity {
 
         leaderBoardEntries = new ArrayList<>();
         final DatabaseReference leaderBoard = FirebaseDatabase.getInstance().getReference(getString(R.string.key_leaderboard));
-        leaderBoard.addValueEventListener(new ValueEventListener() {
+        leaderBoard.orderByChild(getString(R.string.key_score)).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 leaderBoardEntries.clear();
@@ -56,12 +56,7 @@ public class LeaderBoardActivity extends AppCompatActivity {
                 for(DataSnapshot entry : dataSnapshot.getChildren()) {
                     leaderBoardEntries.add(entry.getValue(LeaderBoardEntry.class));
                 }
-                Collections.sort(leaderBoardEntries, new Comparator<LeaderBoardEntry>() {
-                    @Override
-                    public int compare(LeaderBoardEntry o1, LeaderBoardEntry o2) {
-                        return o2.getScore().compareTo(o1.getScore());
-                    }
-                });
+                Collections.reverse(leaderBoardEntries);
                 if(leaderBoardEntries.isEmpty()) {
                     emptyLeaderBoard.setVisibility(View.VISIBLE);
                     progressBar.setVisibility(View.GONE);
@@ -125,7 +120,7 @@ public class LeaderBoardActivity extends AppCompatActivity {
             scoreView.setLayoutParams(scoreParams);
             scoreView.setTypeface(typeface);
             scoreView.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
-            scoreView.setText(entry.getScore());
+            scoreView.setText(entry.getScore()+"");
             scoreView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20);
             scoreView.setTextColor(Color.BLACK);
 

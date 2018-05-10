@@ -8,16 +8,20 @@
     <Button
         android:id="@+id/id_sign_in"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
         android:fontFamily="@font/reem_kufi"
         android:text="@string/sign_in"
-        android:drawableTop="@drawable/g_logo_32"
+        android:drawableStart="@drawable/g_logo_32"
         style="?android:attr/buttonBarButtonStyle" />
 
     <Button
         android:id="@+id/id_logout"
         android:layout_width="match_parent"
-        android:layout_height="67dp"
+        android:layout_height="40dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
         android:fontFamily="@font/reem_kufi"
         android:text="@string/log_out"
         android:layout_below="@+id/id_sign_in"

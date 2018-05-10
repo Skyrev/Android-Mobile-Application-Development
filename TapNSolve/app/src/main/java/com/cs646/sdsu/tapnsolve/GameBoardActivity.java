@@ -288,7 +288,7 @@ public class GameBoardActivity extends AppCompatActivity {
         }
         else if(difficulty.equals(getString(R.string.hard))) {
             gridDimension = 5;
-            buttonDimensionInDp = 60;
+            buttonDimensionInDp = 55;
         }
 
         isPaused = true;
@@ -886,13 +886,13 @@ public class GameBoardActivity extends AppCompatActivity {
         else
             timeTaken += "" + seconds;
 
-        String score = calculateScore(timeElapsed, Integer.parseInt(moves.getText().toString())) + "";
+        int score = calculateScore(timeElapsed, Integer.parseInt(moves.getText().toString()));
 
         Intent goToSuccessActivity = new Intent(GameBoardActivity.this, SuccessActivity.class);
         goToSuccessActivity.putExtra(getString(R.string.key_difficulty), difficulty);
         goToSuccessActivity.putExtra(getString(R.string.key_mode), mode);
         goToSuccessActivity.putExtra(getString(R.string.key_time), timeTaken);
-        goToSuccessActivity.putExtra(getString(R.string.key_moves), moves.getText().toString());
+        goToSuccessActivity.putExtra(getString(R.string.key_moves), Integer.parseInt(moves.getText().toString()));
         goToSuccessActivity.putExtra(getString(R.string.key_score), score);
         startActivity(goToSuccessActivity);
         finish();

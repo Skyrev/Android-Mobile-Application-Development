@@ -9,8 +9,8 @@ public class LeaderBoardEntry {
     private String userId;
     private String username;
     private String time;
-    private String moves;
-    private String score;
+    private int moves;
+    private int score;
     private String difficulty;
     private String mode;
 
@@ -18,7 +18,7 @@ public class LeaderBoardEntry {
         //
     }
 
-    public LeaderBoardEntry(String userId, String difficulty, String mode, String username, String time, String moves, String score) {
+    public LeaderBoardEntry(String userId, String difficulty, String mode, String username, String time, int moves, int score) {
         this.userId = userId;
         this.difficulty = difficulty;
         this.mode = mode;
@@ -68,19 +68,19 @@ public class LeaderBoardEntry {
         this.time = time;
     }
 
-    public String getMoves() {
+    public int getMoves() {
         return moves;
     }
 
-    public void setMoves(String moves) {
+    public void setMoves(int moves) {
         this.moves = moves;
     }
 
-    public String getScore() {
+    public int getScore() {
         return score;
     }
 
-    public void setScore(String score) {
+    public void setScore(int score) {
         this.score = score;
     }
 }

@@ -79,8 +79,8 @@ public class SuccessActivity extends AppCompatActivity {
         final String difficulty = intentFromGameBoard.getStringExtra(getString(R.string.key_difficulty));
         final String mode = intentFromGameBoard.getStringExtra(getString(R.string.key_mode));
         final String time = intentFromGameBoard.getStringExtra(getString(R.string.key_time));
-        final String moves = intentFromGameBoard.getStringExtra(getString(R.string.key_moves));
-        final String score = intentFromGameBoard.getStringExtra(getString(R.string.key_score));
+        final int moves = intentFromGameBoard.getIntExtra(getString(R.string.key_moves), 0);
+        final int score = intentFromGameBoard.getIntExtra(getString(R.string.key_score), 0);
         final String username = currentUser != null ? currentUser.getDisplayName() : getString(R.string.player);
 
         timeTakenView.setText(time);
