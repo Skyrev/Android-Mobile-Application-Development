@@ -64,4 +64,6 @@
     <string name="empty_leader_board">Leaderboard is empty!\n \\(o_o)\/</string>
     <string name="score_published">Score Published!</string>
     <string name="sign_in_to_publish_score">Sign in to publish score</string>
+    <string name="msg_challenge_failed">You failed to solve the puzzle in time.</string>
+    <string name="challenge_failed">Challenge Failed</string>
 </resources>

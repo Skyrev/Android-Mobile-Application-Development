@@ -1004,6 +1004,28 @@ public class GameBoardActivity extends AppCompatActivity {
             public void onFinish() {
                 isPaused = true;
                 startPause.setText(R.string.start);
+                countDownTimerText.setText(R.string.timer_placeholder);
+                if(!isSolved()) {
+                    AlertDialog.Builder alertDialog = new AlertDialog.Builder(GameBoardActivity.this);
+                    alertDialog.setMessage(getString(R.string.msg_challenge_failed));
+                    alertDialog.setCancelable(false);
+                    alertDialog.setPositiveButton(R.string.play_again, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                        reset();
+                        }
+                    });
+                    alertDialog.setNegativeButton(R.string.main_menu, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                        goToMainMenu();
+                        }
+                    });
+
+                    AlertDialog alert = alertDialog.create();
+                    alert.setTitle(R.string.challenge_failed);
+                    alert.show();
+                }
             }
         }.start();
 
