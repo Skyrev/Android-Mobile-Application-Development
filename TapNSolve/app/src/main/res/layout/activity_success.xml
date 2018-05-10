@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorSuccess"
+    tools:context="com.cs646.sdsu.tapnsolve.SuccessActivity">
+
+    <TextView
+        android:id="@+id/id_app_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/reem_kufi"
+        android:text="@string/app_name"
+        android:textSize="42sp"
+        android:textColor="@android:color/black"
+        android:textAlignment="center"
+        android:background="@drawable/border_black"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:layout_alignParentTop="true"/>
+
+    <TextView
+        android:id="@+id/id_great_job"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/id_app_title"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/reem_kufi"
+        android:text="@string/great_job"
+        android:textAlignment="center"
+        android:textSize="28sp"
+        android:textColor="@android:color/black"/>
+
+    <LinearLayout
+        android:id="@+id/id_score_container"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/id_great_job"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/reem_kufi"
+            android:text="@string/your_score"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/id_score"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/reem_kufi"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textColor="@android:color/black"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/id_metrics_container"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/id_score_container"
+        android:layout_marginTop="20dp"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:id="@+id/id_timer_container"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/reem_kufi"
+                android:text="@string/time_taken"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textColor="@android:color/black"/>
+
+            <TextView
+                android:id="@+id/id_time_taken"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/reem_kufi"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textColor="@android:color/black"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/id_moves_container"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/reem_kufi"
+                android:text="@string/moves"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textColor="@android:color/black"/>
+
+            <TextView
+                android:id="@+id/id_moves_taken"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/reem_kufi"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textColor="@android:color/black"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/id_buttons_container"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/id_metrics_container"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        style="?android:attr/buttonBarStyle">
+
+        <Button
+            android:id="@+id/id_publish_score_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/reem_kufi"
+            android:text="@string/publish_score"
+            android:background="@drawable/button_shape"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            style="?android:attr/buttonBarButtonStyle" />
+
+        <Button
+            android:id="@+id/id_main_menu_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/reem_kufi"
+            android:text="@string/main_menu"
+            android:background="@drawable/button_shape"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            style="?android:attr/buttonBarButtonStyle" />
+
+    </LinearLayout>
+
+    <include layout="@layout/layout_sign_in"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+
+</RelativeLayout>

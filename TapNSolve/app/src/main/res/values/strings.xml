@@ -1,0 +1,67 @@
+<resources>
+    <string name="app_name">TAP N SOLVE</string>
+
+    <string name="difficulty">Difficulty</string>
+    <string name="easy">Easy</string>
+    <string name="medium">Medium</string>
+    <string name="hard">Hard</string>
+
+    <string name="mode">Mode</string>
+    <string name="normal">Normal</string>
+    <string name="arcade">Arcade</string>
+
+    <string name="key_difficulty">difficulty</string>
+    <string name="key_mode">mode</string>
+
+    <string name="sound">Sound</string>
+    <string name="vibration">Vibration</string>
+
+    <string name="moves_placeholder">0</string>
+
+    <string name="start"> \u25BA</string>
+    <string name="pause">&#10074;&#10074;</string>
+    <string name="reset">\u21BB</string>
+
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="msg_solved">You did it!</string>
+    <string name="play_again">Play Again</string>
+    <string name="main_menu">Main Menu</string>
+    <string name="title_reset">Reset</string>
+    <string name="msg_reset">This will shuffle the tiles and your progress in this round will be lost.\nAre you sure you want to proceed?</string>
+    <string name="title_quit_round">Quit Round</string>
+    <string name="msg_quit_round">Your progress in this round will be lost.\nAre you sure you want to proceed to Main Menu?</string>
+    <string name="title_quit_game">Quit Game</string>
+    <string name="msg_quit_game">Are you sure you want to quit game?</string>
+    <string name="select_difficulty_mode">Select Difficulty and Mode</string>
+    <string name="key_leaderboard">leaderboard</string>
+    <string name="publish">Publish</string>
+    <string name="great_job">Great Job!</string>
+    <string name="your_score">Your Score</string>
+    <string name="time_taken">Time Taken</string>
+    <string name="moves">Moves</string>
+    <string name="publish_score">Publish Score</string>
+    <string name="sign_in">Sign in with Google</string>
+    <string name="log_out">Log Out</string>
+    <string name="sign_in_failed">Sign In Failed!</string>
+    <string name="signed_in">Signed In!</string>
+    <string name="logged_out">Logged Out</string>
+    <string name="key_username">username</string>
+    <string name="key_time">time</string>
+    <string name="key_moves">moves</string>
+    <string name="key_score">score</string>
+    <string name="sound_on">\u1F508</string>
+    <string name="press_start">Press \"\u25BA\" to start game</string>
+    <string name="leader_board">Leaderboard</string>
+    <string name="score">Score</string>
+    <string name="time">Time</string>
+    <string name="timed">Timed</string>
+    <string name="star">\u2605</string>
+    <string name="rank">Rank</string>
+    <string name="user_stats">User Stats</string>
+    <string name="player">Player</string>
+    <string name="timer_placeholder">00:00</string>
+    <string name="empty_leader_board">Leaderboard is empty!\n \\(o_o)\/</string>
+    <string name="score_published">Score Published!</string>
+    <string name="sign_in_to_publish_score">Sign in to publish score</string>
+</resources>

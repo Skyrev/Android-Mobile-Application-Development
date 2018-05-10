@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#000000</color>
+    <color name="splashBackground">#FFFFFF</color>
+    <color name="colorMainMenu">#ef4d4b</color>
+    <color name="colorLeaderBoard">#fff67d</color>
+    <color name="colorGameBoard">#57a4f4</color>
+    <color name="colorSuccess">#66d266</color>
+</resources>

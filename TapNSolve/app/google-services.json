@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1056827268113",
+    "firebase_url": "https://tap-n-solve.firebaseio.com",
+    "project_id": "tap-n-solve",
+    "storage_bucket": "tap-n-solve.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1056827268113:android:449aaf7419c6c831",
+        "android_client_info": {
+          "package_name": "com.cs646.sdsu.tapnsolve"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1056827268113-rtuuogtqe29d9biggb8siqa21df6s5pi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cs646.sdsu.tapnsolve",
+            "certificate_hash": "9acad6b3951a4ec8f16820488834328c5ea7501e"
+          }
+        },
+        {
+          "client_id": "1056827268113-fnl7lg7da9sga3frodc1doufvoi0pmen.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnceJUAjw-cPE68Htf65INCn02R4VtWHc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1056827268113-fnl7lg7da9sga3frodc1doufvoi0pmen.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
