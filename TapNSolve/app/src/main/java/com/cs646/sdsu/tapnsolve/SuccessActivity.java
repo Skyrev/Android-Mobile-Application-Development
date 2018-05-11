@@ -138,15 +138,12 @@ public class SuccessActivity extends AppCompatActivity {
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        // Result returned from launching the Intent from GoogleSignInApi.getSignInIntent(...);
         if (requestCode == 101) {
             Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
             try {
-                // Google Sign In was successful, authenticate with Firebase
                 GoogleSignInAccount account = task.getResult(ApiException.class);
                 firebaseAuthWithGoogle(account);
             } catch (ApiException e) {
-                // Google Sign In failed, update UI appropriately
                 toggleSignInButton(false);
             }
         }
@@ -159,12 +156,10 @@ public class SuccessActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            // Sign in success, update UI with the signed-in user's information
                             Toast.makeText(SuccessActivity.this, R.string.signed_in, Toast.LENGTH_SHORT).show();
                             toggleSignInButton(true);
 
                         } else {
-                            // If sign in fails, display a message to the user.
                             Toast.makeText(SuccessActivity.this, R.string.sign_in_failed, Toast.LENGTH_SHORT).show();
                             toggleSignInButton(false);
 

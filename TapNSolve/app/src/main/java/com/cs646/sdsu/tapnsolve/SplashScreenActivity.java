@@ -4,9 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-/**
- * Created by skyrev on 4/27/18.
- */
 
 public class SplashScreenActivity extends AppCompatActivity {
 

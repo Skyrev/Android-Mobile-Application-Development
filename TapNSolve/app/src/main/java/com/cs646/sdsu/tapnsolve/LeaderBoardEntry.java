@@ -1,8 +1,5 @@
 package com.cs646.sdsu.tapnsolve;
 
-/**
- * Created by skyrev on 5/5/18.
- */
 
 public class LeaderBoardEntry {
 
