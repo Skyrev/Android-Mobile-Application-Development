@@ -75,7 +75,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
-            android:fontFamily="@font/reem_kufi"
             android:textSize="20sp"
             android:textColor="@android:color/black"
             android:textAlignment="center"/>
@@ -85,7 +84,6 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginStart="5dp"
-            android:fontFamily="@font/reem_kufi"
             android:text="@string/timer_placeholder"
             android:textSize="20sp"
             android:textColor="@android:color/black"
@@ -106,7 +104,6 @@
             android:id="@+id/id_moves_taken"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/reem_kufi"
             android:text="@string/moves_placeholder"
             android:textSize="20sp"
             android:textAlignment="center"
