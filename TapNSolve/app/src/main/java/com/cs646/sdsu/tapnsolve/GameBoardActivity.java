@@ -71,7 +71,7 @@ public class GameBoardActivity extends AppCompatActivity {
 
     private static final long START_TIME_IN_MILLIS_EASY = 300000;
     private static final long START_TIME_IN_MILLIS_MEDIUM = 600000;
-    private static final long START_TIME_IN_MILLIS_HARD = 1200000;
+    private static final long START_TIME_IN_MILLIS_HARD = 900000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -355,6 +355,8 @@ public class GameBoardActivity extends AppCompatActivity {
                                     swapTiles(clicked, right);
                                 else if(bottom.getText().toString().equals(""))
                                     swapTiles(clicked, bottom);
+                                else
+                                    showNoEmptyNeighbourToast();
                                 break;
 
                             case 1:
@@ -367,6 +369,8 @@ public class GameBoardActivity extends AppCompatActivity {
                                     swapTiles(clicked, right);
                                 else if(bottom.getText().toString().equals(""))
                                     swapTiles(clicked, bottom);
+                                else
+                                    showNoEmptyNeighbourToast();
                                 break;
 
                             case 2:
@@ -376,6 +380,8 @@ public class GameBoardActivity extends AppCompatActivity {
                                     swapTiles(clicked, left);
                                 else if(bottom.getText().toString().equals(""))
                                     swapTiles(clicked, bottom);
+                                else
+                                    showNoEmptyNeighbourToast();
                                 break;
 
                             case 3:
@@ -388,6 +394,8 @@ public class GameBoardActivity extends AppCompatActivity {
                                     swapTiles(clicked, right);
                                 else if(bottom.getText().toString().equals(""))
                                     swapTiles(clicked, bottom);
+                                else
+                                    showNoEmptyNeighbourToast();
                                 break;
 
                             case 4:
@@ -403,6 +411,8 @@ public class GameBoardActivity extends AppCompatActivity {
                                     swapTiles(clicked, right);
                                 else if(bottom.getText().toString().equals(""))
                                     swapTiles(clicked, bottom);
+                                else
+                                    showNoEmptyNeighbourToast();
                                 break;
 
                             case 5:
@@ -415,6 +425,8 @@ public class GameBoardActivity extends AppCompatActivity {
                                     swapTiles(clicked, top);
                                 else if(bottom.getText().toString().equals(""))
                                     swapTiles(clicked, bottom);
+                                else
+                                    showNoEmptyNeighbourToast();
                                 break;
 
                             case 6:
@@ -424,6 +436,8 @@ public class GameBoardActivity extends AppCompatActivity {
                                     swapTiles(clicked, top);
                                 else if(right.getText().toString().equals(""))
                                     swapTiles(clicked, right);
+                                else
+                                    showNoEmptyNeighbourToast();
                                 break;
 
                             case 7:
@@ -436,7 +450,10 @@ public class GameBoardActivity extends AppCompatActivity {
                                     swapTiles(clicked, left);
                                 else if(top.getText().toString().equals(""))
                                     swapTiles(clicked, top);
+                                else
+                                    showNoEmptyNeighbourToast();
                                 break;
+
                             case 8:
                                 left = (Button)puzzleContainer.getChildAt(clickedTile-1);
                                 top = (Button)puzzleContainer.getChildAt(clickedTile-3);
@@ -444,6 +461,8 @@ public class GameBoardActivity extends AppCompatActivity {
                                     swapTiles(clicked, left);
                                 else if(top.getText().toString().equals(""))
                                     swapTiles(clicked, top);
+                                else
+                                    showNoEmptyNeighbourToast();
                                 break;
                         }
                     }
@@ -456,6 +475,8 @@ public class GameBoardActivity extends AppCompatActivity {
                                     swapTiles(clicked, right);
                                 else if(bottom.getText().toString().equals(""))
                                     swapTiles(clicked, bottom);
+                                else
+                                    showNoEmptyNeighbourToast();
                                 break;
 
                             case 1:
@@ -469,6 +490,8 @@ public class GameBoardActivity extends AppCompatActivity {
                                     swapTiles(clicked, right);
                                 else if(bottom.getText().toString().equals(""))
                                     swapTiles(clicked, bottom);
+                                else
+                                    showNoEmptyNeighbourToast();
                                 break;
 
                             case 3:
@@ -478,6 +501,8 @@ public class GameBoardActivity extends AppCompatActivity {
                                     swapTiles(clicked, left);
                                 else if(bottom.getText().toString().equals(""))
                                     swapTiles(clicked, bottom);
+                                else
+                                    showNoEmptyNeighbourToast();
                                 break;
 
                             case 4:
@@ -490,6 +515,8 @@ public class GameBoardActivity extends AppCompatActivity {
                                     swapTiles(clicked, right);
                                 else if(bottom.getText().toString().equals(""))
                                     swapTiles(clicked, bottom);
+                                else
+                                    showNoEmptyNeighbourToast();
                                 break;
 
                             case 5:
@@ -506,6 +533,8 @@ public class GameBoardActivity extends AppCompatActivity {
                                     swapTiles(clicked, right);
                                 else if(bottom.getText().toString().equals(""))
                                     swapTiles(clicked, bottom);
+                                else
+                                    showNoEmptyNeighbourToast();
                                 break;
 
                             case 7:
@@ -518,6 +547,8 @@ public class GameBoardActivity extends AppCompatActivity {
                                     swapTiles(clicked, top);
                                 else if(bottom.getText().toString().equals(""))
                                     swapTiles(clicked, bottom);
+                                else
+                                    showNoEmptyNeighbourToast();
                                 break;
 
                             case 8:
@@ -530,6 +561,8 @@ public class GameBoardActivity extends AppCompatActivity {
                                     swapTiles(clicked, right);
                                 else if(bottom.getText().toString().equals(""))
                                     swapTiles(clicked, bottom);
+                                else
+                                    showNoEmptyNeighbourToast();
                                 break;
 
                             case 9:
@@ -546,6 +579,8 @@ public class GameBoardActivity extends AppCompatActivity {
                                     swapTiles(clicked, right);
                                 else if(bottom.getText().toString().equals(""))
                                     swapTiles(clicked, bottom);
+                                else
+                                    showNoEmptyNeighbourToast();
                                 break;
 
                             case 11:
@@ -558,6 +593,8 @@ public class GameBoardActivity extends AppCompatActivity {
                                     swapTiles(clicked, top);
                                 else if(bottom.getText().toString().equals(""))
                                     swapTiles(clicked, bottom);
+                                else
+                                    showNoEmptyNeighbourToast();
                                 break;
 
                             case 12:
@@ -567,6 +604,8 @@ public class GameBoardActivity extends AppCompatActivity {
                                     swapTiles(clicked, top);
                                 else if(right.getText().toString().equals(""))
                                     swapTiles(clicked, right);
+                                else
+                                    showNoEmptyNeighbourToast();
                                 break;
 
                             case 13:
@@ -580,6 +619,8 @@ public class GameBoardActivity extends AppCompatActivity {
                                     swapTiles(clicked, top);
                                 else if(right.getText().toString().equals(""))
                                     swapTiles(clicked, right);
+                                else
+                                    showNoEmptyNeighbourToast();
                                 break;
 
                             case 15:
@@ -589,6 +630,8 @@ public class GameBoardActivity extends AppCompatActivity {
                                     swapTiles(clicked, left);
                                 else if(top.getText().toString().equals(""))
                                     swapTiles(clicked, top);
+                                else
+                                    showNoEmptyNeighbourToast();
                                 break;
                         }
                     }
@@ -601,6 +644,8 @@ public class GameBoardActivity extends AppCompatActivity {
                                     swapTiles(clicked, right);
                                 else if(bottom.getText().toString().equals(""))
                                     swapTiles(clicked, bottom);
+                                else
+                                    showNoEmptyNeighbourToast();
                                 break;
 
                             case 1:
@@ -615,6 +660,8 @@ public class GameBoardActivity extends AppCompatActivity {
                                     swapTiles(clicked, right);
                                 else if(bottom.getText().toString().equals(""))
                                     swapTiles(clicked, bottom);
+                                else
+                                    showNoEmptyNeighbourToast();
                                 break;
 
                             case 4:
@@ -624,6 +671,8 @@ public class GameBoardActivity extends AppCompatActivity {
                                     swapTiles(clicked, left);
                                 else if(bottom.getText().toString().equals(""))
                                     swapTiles(clicked, bottom);
+                                else
+                                    showNoEmptyNeighbourToast();
                                 break;
 
                             case 5:
@@ -636,6 +685,8 @@ public class GameBoardActivity extends AppCompatActivity {
                                     swapTiles(clicked, right);
                                 else if(bottom.getText().toString().equals(""))
                                     swapTiles(clicked, bottom);
+                                else
+                                    showNoEmptyNeighbourToast();
                                 break;
 
                             case 6:
@@ -653,6 +704,8 @@ public class GameBoardActivity extends AppCompatActivity {
                                     swapTiles(clicked, right);
                                 else if(bottom.getText().toString().equals(""))
                                     swapTiles(clicked, bottom);
+                                else
+                                    showNoEmptyNeighbourToast();
                                 break;
 
                             case 9:
@@ -665,6 +718,8 @@ public class GameBoardActivity extends AppCompatActivity {
                                     swapTiles(clicked, top);
                                 else if(bottom.getText().toString().equals(""))
                                     swapTiles(clicked, bottom);
+                                else
+                                    showNoEmptyNeighbourToast();
                                 break;
 
                             case 10:
@@ -677,6 +732,8 @@ public class GameBoardActivity extends AppCompatActivity {
                                     swapTiles(clicked, right);
                                 else if(bottom.getText().toString().equals(""))
                                     swapTiles(clicked, bottom);
+                                else
+                                    showNoEmptyNeighbourToast();
                                 break;
 
                             case 11:
@@ -694,6 +751,8 @@ public class GameBoardActivity extends AppCompatActivity {
                                     swapTiles(clicked, right);
                                 else if(bottom.getText().toString().equals(""))
                                     swapTiles(clicked, bottom);
+                                else
+                                    showNoEmptyNeighbourToast();
                                 break;
 
                             case 14:
@@ -706,6 +765,8 @@ public class GameBoardActivity extends AppCompatActivity {
                                     swapTiles(clicked, top);
                                 else if(bottom.getText().toString().equals(""))
                                     swapTiles(clicked, bottom);
+                                else
+                                    showNoEmptyNeighbourToast();
                                 break;
 
                             case 15:
@@ -718,6 +779,8 @@ public class GameBoardActivity extends AppCompatActivity {
                                     swapTiles(clicked, right);
                                 else if(bottom.getText().toString().equals(""))
                                     swapTiles(clicked, bottom);
+                                else
+                                    showNoEmptyNeighbourToast();
                                 break;
 
                             case 16:
@@ -735,6 +798,8 @@ public class GameBoardActivity extends AppCompatActivity {
                                     swapTiles(clicked, right);
                                 else if(bottom.getText().toString().equals(""))
                                     swapTiles(clicked, bottom);
+                                else
+                                    showNoEmptyNeighbourToast();
                                 break;
 
                             case 19:
@@ -747,6 +812,8 @@ public class GameBoardActivity extends AppCompatActivity {
                                     swapTiles(clicked, top);
                                 else if(bottom.getText().toString().equals(""))
                                     swapTiles(clicked, bottom);
+                                else
+                                    showNoEmptyNeighbourToast();
                                 break;
 
                             case 20:
@@ -756,6 +823,8 @@ public class GameBoardActivity extends AppCompatActivity {
                                     swapTiles(clicked, top);
                                 else if(right.getText().toString().equals(""))
                                     swapTiles(clicked, right);
+                                else
+                                    showNoEmptyNeighbourToast();
                                 break;
 
                             case 21:
@@ -770,6 +839,8 @@ public class GameBoardActivity extends AppCompatActivity {
                                     swapTiles(clicked, top);
                                 else if(right.getText().toString().equals(""))
                                     swapTiles(clicked, right);
+                                else
+                                    showNoEmptyNeighbourToast();
                                 break;
 
                             case 24:
@@ -779,6 +850,8 @@ public class GameBoardActivity extends AppCompatActivity {
                                     swapTiles(clicked, left);
                                 else if(top.getText().toString().equals(""))
                                     swapTiles(clicked, top);
+                                else
+                                    showNoEmptyNeighbourToast();
                                 break;
                         }
                     }
@@ -1034,6 +1107,8 @@ public class GameBoardActivity extends AppCompatActivity {
                     AlertDialog alert = alertDialog.create();
                     alert.setTitle(R.string.challenge_failed);
                     alert.show();
+                    if(toggleVibration.isChecked())
+                        vibrator.vibrate(100);
                 }
             }
         }.start();
@@ -1046,6 +1121,12 @@ public class GameBoardActivity extends AppCompatActivity {
         countDownTimer.cancel();
         isPaused = true;
         startPause.setText(R.string.start);
+    }
+
+    private void showNoEmptyNeighbourToast() {
+        if(toggleVibration.isChecked())
+            vibrator.vibrate(100);
+        Toast.makeText(GameBoardActivity.this, R.string.no_empty_neighbour, Toast.LENGTH_SHORT).show();
     }
 
 }

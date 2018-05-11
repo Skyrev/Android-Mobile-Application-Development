@@ -67,4 +67,5 @@
     <string name="msg_challenge_failed">You failed to solve the puzzle in time.</string>
     <string name="challenge_failed">Challenge Failed</string>
     <string name="about">About</string>
+    <string name="no_empty_neighbour">No empty neighbour</string>
 </resources>
